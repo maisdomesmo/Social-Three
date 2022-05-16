@@ -1,0 +1,112 @@
+
+/*=======
+:root {
+}
+==GERAL==========*/
+
+body{
+    --hue : 70;
+    --secondary: hsl(var(--hue), 60%, 98%);
+    --primary: hsl(var(--hue), 50%, 73%);
+    --night: hsl(var(--hue), 50%, 20%);
+    background-color: var(--secondary);
+    font-family: 'DM Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary);
+}
+/*==========HEADER=========*/
+header{
+     margin-top: 0vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+header img{
+      padding: 3px;
+      display: flex;
+      width: max(13vw, 100px);
+      border-radius: 50%;
+      border: 3px solid var(--primary);  
+}
+
+header img:hover{
+    transition: transform 3s;
+    transform: rotateY(180deg); 
+}
+header img:not(:hover){
+    transition: transform 3s;
+    transform: rotateY(0deg); 
+}
+
+header a{
+    margin-top: 10px;
+    display: flex;
+    font-weight: 400;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+/*==========LINKS=========*/
+div.links{
+    margin-top: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+div.links a{
+    text-align: center;
+    width: max(20vw, 200px);
+    margin-block: 10px;
+    padding-block: 5px;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+div.links a:hover{
+    background-color: var(--primary);
+    color: var(--secondary);
+    transform: scale(1.1, 1.1);
+    transition: transform 0.7s, background-color 0.7s, color 0.7s;
+}
+div.links a:not(:hover){
+    background-color: var(--secondary);
+    color: var(--primary);
+    transition: transform 0.7s, background-color 0.7s, color 0.7s;
+    transform: scale(1.0, 1.0)
+}
+
+/*==========LOGOS=========*/
+.logos {
+    margin-inline: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: max(20vw, 200px);
+}
+
+.logos svg path {
+    stroke: var(--primary);
+}
+
+.logos svg:hover{
+    transition: transform 0.4s;
+    transform: scale(1.4, 1.4);
+    cursor:pointer;
+}
+.logos svg:not(:hover){
+    transition: transform 0.4s;
+    transform: scale(1, 1);
+    cursor:pointer;
+}
+/*==========BUTTON=========*/
+div.btn svg{
+    width: 50px;
+    height: 50px;
+}
