@@ -1,11 +1,9 @@
 
-/*=======
-:root {
-}
-==GERAL==========*/
+/*=======GERAL=======
+===*/
 
 body{
-    --hue : 70;
+    --hue : 280;
     --secondary: hsl(var(--hue), 60%, 98%);
     --primary: hsl(var(--hue), 50%, 73%);
     --night: hsl(var(--hue), 50%, 20%);
@@ -29,7 +27,7 @@ header img{
       display: flex;
       width: max(13vw, 100px);
       border-radius: 50%;
-      border: 3px solid var(--primary);  
+      border: 2px solid var(--primary)  
 }
 
 header img:hover{
@@ -97,12 +95,27 @@ div.links a:not(:hover){
 .logos svg path {
     stroke: var(--primary);
 }
+.logos a:nth-child(5) svg path{
+    fill: var(--secondary);
+}
 
 .logos svg:hover{
     transition: transform 0.4s, filter 1s;
     transform: scale(1.4, 1.4);
     cursor:pointer;
     filter: brightness(1.5);
+}
+.logos svg:hover{
+    transition: transform 0.4s, filter 1s;
+    transform: scale(1.4, 1.4);
+    cursor:pointer;
+    filter: brightness(0.8);
+}
+.logos.night svg:hover{
+    transition: transform 0.4s, filter 1s;
+    transform: scale(1.4, 1.4);
+    cursor:pointer;
+    filter: brightness(1.8);
 }
 .logos svg:not(:hover){
     transition: transform 0.4s;
