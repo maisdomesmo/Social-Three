@@ -48,7 +48,8 @@ header a{
 }
 
 header a:hover{
-    text-decoration: underline;
+    filter: brightness(1.5);
+    transition: filter 1s;
 }
 
 /*==========LINKS=========*/
@@ -60,6 +61,7 @@ div.links{
 }
 
 div.links a{
+    
     text-align: center;
     width: max(20vw, 200px);
     margin-block: 10px;
@@ -67,6 +69,7 @@ div.links a{
     border: 2px solid var(--primary);
     border-radius: 5px;
     font-weight: 700;
+    background-color: var(--primary);
 }
 
 div.links a:hover{
@@ -96,17 +99,28 @@ div.links a:not(:hover){
 }
 
 .logos svg:hover{
-    transition: transform 0.4s;
+    transition: transform 0.4s, filter 1s;
     transform: scale(1.4, 1.4);
     cursor:pointer;
+    filter: brightness(1.5);
 }
 .logos svg:not(:hover){
     transition: transform 0.4s;
     transform: scale(1, 1);
     cursor:pointer;
+    filter: brightness(1);
 }
 /*==========BUTTON=========*/
 div.btn svg{
     width: 50px;
     height: 50px;
+}
+
+.btnon {
+    display: none;
+    transition:  2s;
+}
+.btnoff {
+    display: initial;
+    transition:  2s;
 }
